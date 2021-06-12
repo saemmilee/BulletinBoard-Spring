@@ -138,9 +138,9 @@ public class BoardController {
 	
 	// Criteria를 확장해서 bno값을 처리하지 않고, 별도의 파라미터로 사용한 이유는?
 	// 만일 Criteria를 상속해서 bno 등을 추가적인 속성으로 사용하게 되면,
-	// 숫자가 아닌 문자열을 처리하는 경우에 다시 상속해야 하는 문제가 생길 수 있습니다.
+	// 숫자가 아닌 문자열을 처리하는 경우에 다시 상속해야 하는 문제가 생길 수 있다.
 	// 또한 Criteria는 페이징 처리를 위해서 존재하는 객체이므로
-	// 매번 의미 없는 bno등을 유지할 필요가 없기 때문입니다.
+	// 매번 의미 없는 bno등을 유지할 필요가 없기 때문이다.
 
 	@RequestMapping(value = "/readPage", method = RequestMethod.GET)
 	public void read(@RequestParam("bno") int bno, @ModelAttribute("cri") Criteria cri, Model model) throws Exception {

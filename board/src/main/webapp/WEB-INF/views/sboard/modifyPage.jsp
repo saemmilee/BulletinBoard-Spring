@@ -51,27 +51,20 @@
 				</div>
 
 				<script>
-					$(document)
-							.ready(
-									function() {
+					$(document).ready(function() {
 
-										var formObj = $("form[role='form']");
+						var formObj = $("form[role='form']");
+						console.log(formObj);
+						
+						$(".btn-warning").on("click", function() {
+							self.location = "/sboard/list?page=${cri.page}&perPageNum=${cri.perPageNum}"
+									        + "&searchType=${cri.searchType}&keyword=${cri.keyword}";
+						});
 
-										console.log(formObj);
-
-										$(".btn-warning")
-												.on(
-														"click",
-														function() {
-															self.location = "/sboard/list?page=${cri.page}&perPageNum=${cri.perPageNum}"
-																	+ "&searchType=${cri.searchType}&keyword=${cri.keyword}";
-														});
-
-										$(".btn-primary").on("click",
-												function() {
-													formObj.submit();
-												});
-									});
+						$(".btn-primary").on("click", function() {
+							formObj.submit();
+						});
+					});
 				</script>
 
 

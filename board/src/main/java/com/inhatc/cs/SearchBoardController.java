@@ -26,7 +26,7 @@ public class SearchBoardController {
 	private BoardService service;
 	
 	// SearchCriteria는 Criteria를 상속하는 경우 
-	// 화면에 페이징 처리를 하는 pageMaker에서도 그대로 사용할 수 있기 때문에 페이징 처리에 있어서도 좀 더 편할 수 있습니다.
+	// 화면에 페이징 처리를 하는 pageMaker에서도 그대로 사용할 수 있기 때문에 페이징 처리에 있어서도 좀 더 편할 수 있다.
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public void listPage(@ModelAttribute("cri") SearchCriteria cri, Model model) throws Exception {
